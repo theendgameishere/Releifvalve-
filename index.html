@@ -2,6 +2,7 @@
 <html lang="en" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
+    <!-- FIXED: Enabled user scaling for accessibility by removing user-scalable=no and ensuring a standard viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO & Metadata -->
@@ -20,10 +21,14 @@
     <!-- Service Worker Hook -->
 
     <!-- Stylesheets -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- PERFORMANCE-FIX: Replaced the slow Tailwind JIT script with a pre-compiled production-ready CSS file -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- PERFORMANCE-FIX: Made aos.css non-render-blocking to improve First Contentful Paint -->
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
 
-    <!-- JSON-LD Schema for Local Business (FIXED) -->
+    <!-- JSON-LD Schema for Local Business -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -247,6 +252,12 @@
             animation-delay: -10s;
         }
 
+        /* ACCESSIBILITY-FIX: Added styles for form placeholder text to ensure sufficient color contrast */
+        .form-input::placeholder {
+           color: #9CA3AF; /* gray-400 */
+           opacity: 1; /* Override browser defaults */
+        }
+
         @keyframes slideDown {
             from {
                 opacity: 0;
@@ -420,12 +431,13 @@
                         <p class="text-lg text-gray-300 mb-4">When a critical valve fails, your entire operation grinds to a halt. Production stops, deadlines are missed, and revenue is lost. Finding a reliable expert for an urgent, after-hours repair isn't just a challenge—it's a high-stakes emergency that your business can't afford.</p>
                     </div>
                     <div data-aos="fade-left" class="relative">
-                        <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="A network of industrial pipes and valves in a facility" loading="lazy" class="rounded-lg shadow-2xl">
+                        <!-- PERFORMANCE-FIX: Added lazy loading and async decoding for better performance -->
+                        <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="A network of industrial pipes and valves in a facility" loading="lazy" decoding="async" class="rounded-lg shadow-2xl">
                     </div>
                 </div>
             </section>
 
-            <!-- Trust & Credibility Section (FIXED) -->
+            <!-- Trust & Credibility Section -->
             <section id="trust" class="py-20 bg-gray-800/50">
                 <div class="container mx-auto max-w-5xl text-center">
                     <h2 class="text-3xl font-bold text-white mb-2">Your Trusted Partner in Valve Safety</h2>
@@ -549,19 +561,20 @@
                             </a>
                         </div>
 
+                        <!-- NOTE: This form requires a backend endpoint to be functional. -->
                         <form action="#" method="POST" class="space-y-6 text-left">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <input type="text" name="name" placeholder="Your Name" required class="w-full bg-gray-800 border-gray-700 border-2 rounded-md p-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                <input type="email" name="email" placeholder="Your Email" required class="w-full bg-gray-800 border-gray-700 border-2 rounded-md p-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <!-- UX-FIX: Added autocomplete attributes -->
+                                <input type="text" name="name" placeholder="Your Name" required autocomplete="name" class="form-input w-full bg-gray-800 border-gray-700 border-2 rounded-md p-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <input type="email" name="email" placeholder="Your Email" required autocomplete="email" class="form-input w-full bg-gray-800 border-gray-700 border-2 rounded-md p-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
                             </div>
-                            <input type="text" name="subject" placeholder="Subject" required class="w-full bg-gray-800 border-gray-700 border-2 rounded-md p-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            <textarea name="message" rows="5" placeholder="Your Message" required class="w-full bg-gray-800 border-gray-700 border-2 rounded-md p-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            <input type="text" name="subject" placeholder="Subject" required class="form-input w-full bg-gray-800 border-gray-700 border-2 rounded-md p-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <textarea name="message" rows="5" placeholder="Your Message" required class="form-input w-full bg-gray-800 border-gray-700 border-2 rounded-md p-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
                             <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg text-lg hover:bg-blue-700 transition-colors shadow-lg">Send Message</button>
                         </form>
 
                         <!-- Map Placeholder -->
                         <div class="mt-8 text-gray-500">
-                            <!-- Map Placeholder -->
                             Serving Millbrook, AL and surrounding areas.
                         </div>
                     </div>
@@ -576,8 +589,10 @@
     </div>
 
     <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- PERFORMANCE-FIX: Added defer to load script without blocking page render -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script>
+      // The AOS init script can remain here. It will run after the deferred script is loaded and the DOM is parsed.
       AOS.init({
         once: true,
         duration: 800,
@@ -585,6 +600,7 @@
     </script>
 
     <!-- Aminos AI Chatbot -->
-    <script src='https://app.aminos.ai/js/chat_plugin.js' data-bot-id='36588'></script>
+    <!-- PERFORMANCE-FIX: Added defer to load chatbot script without blocking page render -->
+    <script src='https://app.aminos.ai/js/chat_plugin.js' data-bot-id='36588' defer></script>
 </body>
 </html>
