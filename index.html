@@ -9,6 +9,10 @@
     <meta name="description" content="Expert relief valve repair and service in Millbrook, AL. We offer 24/7 emergency service to minimize your production downtime. Call now for immediate assistance.">
     <meta name="keywords" content="emergency valve repair Millbrook AL, industrial valve maintenance Alabama, relief valve service near me">
 
+    <!-- Preconnect to external domains to speed up resource loading -->
+    <link rel="preconnect" href="https://images.pexels.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="24/7 Emergency Valve Repair | Relief Valve Service Inc.">
     <meta property="og:description" content="Expert relief valve repair and service in Millbrook, AL. We offer 24/7 emergency service to minimize your production downtime.">
@@ -16,13 +20,8 @@
     <meta property="og:url" content="https://www.reliefvalveservice.com">
     <meta property="og:type" content="website">
 
-    <!-- Service Worker Hook -->
-    <!-- Service Worker Hook -->
-
     <!-- Stylesheets -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- JSON-LD Schema for Local Business -->
     <script type="application/ld+json">
@@ -66,268 +65,95 @@
       }
     }
     </script>
+
+    <!-- Inlined CSS for Performance -->
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        /* Base and Tailwind-like resets */
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; border-style: solid; border-color: #e5e7eb; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; -moz-tab-size: 4; tab-size: 4; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+        body { margin: 0; line-height: inherit; }
+        h1, h2, h3, p, svg, details, summary { margin: 0; }
+        a { color: inherit; text-decoration: inherit; }
+        input, textarea, button { font-family: inherit; font-size: 100%; font-weight: inherit; line-height: inherit; color: inherit; margin: 0; padding: 0; }
+        button { text-transform: none; background-color: transparent; background-image: none; cursor: pointer; }
+        
+        /* Utility Classes from Tailwind used in the document */
+        .container { width: 100%; margin-right: auto; margin-left: auto; padding-right: 1rem; padding-left: 1rem; }
+        @media (min-width: 640px) { .container { max-width: 640px; } }
+        @media (min-width: 768px) { .container { max-width: 768px; } }
+        @media (min-width: 1024px) { .container { max-width: 1024px; } }
+        @media (min-width: 1280px) { .container { max-width: 1280px; } }
+        .mx-auto { margin-left: auto; margin-right: auto; } .mb-4 { margin-bottom: 1rem; } .mb-8 { margin-bottom: 2rem; } .mb-12 { margin-bottom: 3rem; } .p-6 { padding: 1.5rem; } .p-8 { padding: 2rem; } .py-20 { padding-top: 5rem; padding-bottom: 5rem; } .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .text-center { text-align: center; } .text-left { text-align: left; }
+        .font-bold { font-weight: 700; } .font-sans { font-family: 'Arial', sans-serif; }
+        .text-lg { font-size: 1.125rem; } .text-2xl { font-size: 1.5rem; } .text-3xl { font-size: 1.875rem; } .text-4xl { font-size: 2.25rem; }
+        .text-white { color: #fff; } .text-gray-200 { color: #e5e7eb; } .text-gray-300 { color: #d1d5db; } .text-gray-400 { color: #9ca3af; } .text-gray-500 { color: #6b7280; } .bg-gray-800 { background-color: #1f2937; } .bg-gray-900 { background-color: #111827; } .bg-black { background-color: #000; } .bg-blue-600 { background-color: #2563eb; }
+        .text-blue-300 { color: #93c5fd; } .text-blue-400 { color: #60a5fa; } .text-blue-500 { color: #3b82fd; } .text-green-400 { color: #4ade80; }
+        .grid { display: grid; } .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); } .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .gap-8 { gap: 2rem; } .gap-12 { gap: 3rem; } .space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
+        .items-center { align-items: center; } .justify-between { justify-content: space-between; } .justify-center { justify-content: center; }
+        .rounded-lg { border-radius: 0.5rem; } .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05); } .shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0,0,0,.25); }
+        .w-full { width: 100%; } .w-24 { width: 6rem; } .h-24 { height: 6rem; }
+        .flex { display: flex; } .flex-col { flex-direction: column; } .md\:flex-row { flex-direction: row; }
+        .hover\:bg-blue-700:hover { background-color: #1d4ed8; } .hover\:text-blue-500:hover { color: #3b82fd; } .transition-colors { transition-property: background-color, border-color, color, fill, stroke; transition-timing-function: cubic-bezier(.4,0,.2,1); transition-duration: .15s; }
+        .max-w-2xl { max-width: 42rem; } .max-w-4xl { max-width: 56rem; } .max-w-5xl { max-width: 64rem; } .max-w-6xl { max-width: 72rem; }
+        .italic { font-style: italic; } .list-none { list-style-type: none; }
+        .group:hover .group-open\:rotate-45 { transform: rotate(45deg); }
+        .transform { transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)); }
+        .transition-transform { transition-property: transform; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 300ms; }
+        .bg-gray-800\/50 { background-color: rgba(31, 41, 55, 0.5); }
+        .border-gray-700 { border-color: #374151; } .border-2 { border-width: 2px; }
+        .focus\:outline-none:focus { outline: 2px solid transparent; outline-offset: 2px; } .focus\:ring-2:focus { --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color); --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color); box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000); }
+        .focus\:ring-blue-500:focus { --tw-ring-color: #3b82fd; }
+        @media (min-width: 768px) { .md\:px-8 { padding-left: 2rem; padding-right: 2rem; } .md\:space-x-8 > :not([hidden]) ~ :not([hidden]) { margin-left: 2rem; } .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) { margin-top: 0; } }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            overflow-x: hidden;
-        }
-
-        /* LAYOUT-FIX: Removed fixed height (height: 100vh) and replaced with padding. */
-        /* This makes the section height flexible and removes the large empty space on mobile. */
-        .hero-section {
-            position: relative;
-            padding: 6rem 1rem; /* Added padding for spacing */
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background:
-                radial-gradient(circle at 20% 80%, rgba(120, 180, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(120, 180, 255, 0.1) 0%, transparent 50%);
-            animation: float 20s ease-in-out infinite;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            text-align: center;
-            color: white;
-            max-width: 1200px;
-            padding: 0 20px;
-        }
-
-        .logo-container {
-            margin-bottom: 30px;
-            animation: slideDown 1s ease-out;
-        }
-
-        .logo {
-            width: 280px;
-            height: 280px;
-            margin: 0 auto 20px;
-            background: linear-gradient(145deg, #ffffff, #f0f0f0);
-            border-radius: 35px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow:
-                0 25px 50px rgba(0, 0, 0, 0.4),
-                inset 0 2px 4px rgba(255, 255, 255, 0.9),
-                inset 0 -2px 4px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-        }
-
-        .logo::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transform: rotate(45deg);
-            animation: shimmer 3s infinite;
-        }
-
-        .logo-icon {
-            width: 260px;
-            height: 260px;
-            fill: #1e40af;
-            position: relative;
-            z-index: 2;
-            filter: drop-shadow(0 8px 16px rgba(30, 64, 175, 0.3));
-        }
-
-        .company-name {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            animation: slideUp 1s ease-out 0.3s both;
-        }
-
-        .tagline {
-            font-size: 1.4rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-            font-weight: 300;
-            animation: slideUp 1s ease-out 0.6s both;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: slideUp 1s ease-out 0.9s both;
-        }
-
-        .cta-button {
-            padding: 15px 30px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .cta-primary {
-            background: #ffffff;
-            color: #1e40af;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .cta-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .cta-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .cta-secondary:hover {
-            background: white;
-            color: #1e40af;
-            transform: translateY(-2px);
-        }
-
-        .floating-elements {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            opacity: 0.1;
-        }
-
-        .floating-valve {
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            fill: white;
-            animation: floatAround 15s infinite ease-in-out;
-        }
-
-        .floating-valve:nth-child(1) {
-            top: 20%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-
-        .floating-valve:nth-child(2) {
-            top: 60%;
-            right: 15%;
-            animation-delay: -5s;
-        }
-
-        .floating-valve:nth-child(3) {
-            bottom: 20%;
-            left: 20%;
-            animation-delay: -10s;
-        }
-
-        .form-input::placeholder {
-           color: #9CA3AF; /* gray-400 */
-           opacity: 1; 
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes shimmer {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-
-        @keyframes floatAround {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            25% { transform: translate(30px, -20px) rotate(90deg); }
-            50% { transform: translate(-20px, -30px) rotate(180deg); }
-            75% { transform: translate(-30px, 20px) rotate(270deg); }
-        }
-
+        /* Custom Styles from original file */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; overflow-x: hidden; }
+        .hero-section { position: relative; height: 100vh; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .hero-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 20% 80%, rgba(120, 180, 255, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(120, 180, 255, 0.1) 0%, transparent 50%); animation: float 20s ease-in-out infinite; }
+        .hero-content { position: relative; z-index: 10; text-align: center; color: white; max-width: 1200px; padding: 0 20px; }
+        .logo-container { margin-bottom: 30px; animation: slideDown 1s ease-out; }
+        .logo { width: 280px; height: 280px; margin: 0 auto 20px; background: linear-gradient(145deg, #ffffff, #f0f0f0); border-radius: 35px; display: flex; align-items: center; justify-content: center; box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.9), inset 0 -2px 4px rgba(0, 0, 0, 0.1); position: relative; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.5); }
+        .logo::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent); transform: rotate(45deg); animation: shimmer 3s infinite; }
+        .logo-icon { width: 260px; height: 260px; fill: #1e40af; position: relative; z-index: 2; filter: drop-shadow(0 8px 16px rgba(30, 64, 175, 0.3)); }
+        .company-name { font-size: 3.5rem; font-weight: 700; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); animation: slideUp 1s ease-out 0.3s both; }
+        .tagline { font-size: 1.4rem; margin-bottom: 40px; opacity: 0.9; font-weight: 300; animation: slideUp 1s ease-out 0.6s both; }
+        .cta-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; animation: slideUp 1s ease-out 0.9s both; }
+        .cta-button { padding: 15px 30px; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; text-decoration: none; display: inline-block; }
+        .cta-primary { background: #ffffff; color: #1e40af; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); }
+        .cta-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); }
+        .cta-secondary { background: transparent; color: white; border: 2px solid white; }
+        .cta-secondary:hover { background: white; color: #1e40af; transform: translateY(-2px); }
+        .floating-elements { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0.1; }
+        .floating-valve { position: absolute; width: 60px; height: 60px; fill: white; animation: floatAround 15s infinite ease-in-out; }
+        .floating-valve:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+        .floating-valve:nth-child(2) { top: 60%; right: 15%; animation-delay: -5s; }
+        .floating-valve:nth-child(3) { bottom: 20%; left: 20%; animation-delay: -10s; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-50px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes shimmer { 0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); } 100% { transform: translateX(100%) translateY(100%) rotate(45deg); } }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+        @keyframes floatAround { 0%, 100% { transform: translate(0, 0) rotate(0deg); } 25% { transform: translate(30px, -20px) rotate(90deg); } 50% { transform: translate(-20px, -30px) rotate(180deg); } 75% { transform: translate(-30px, 20px) rotate(270deg); } }
         @media (max-width: 768px) {
-            .company-name {
-                font-size: 2.5rem;
-            }
-
-            .tagline {
-                font-size: 1.2rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .logo {
-                width: 200px;
-                height: 200px;
-            }
-
-            .logo-icon {
-                width: 180px;
-                height: 180px;
-            }
+            .company-name { font-size: 2.5rem; }
+            .tagline { font-size: 1.2rem; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .logo { width: 200px; height: 200px; }
+            .logo-icon { width: 180px; height: 180px; }
         }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-200 font-sans">
 
+    <!-- Wrapper to prevent horizontal scroll from animations -->
     <div class="overflow-x-hidden">
         <main role="main">
 
             <!-- Hero Section -->
             <section class="hero-section">
                 <div class="hero-background"></div>
+
                 <div class="floating-elements">
                     <svg class="floating-valve" viewBox="0 0 100 100">
                         <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="4"/>
@@ -337,12 +163,14 @@
                         <line x1="20" y1="50" x2="35" y2="50" stroke="currentColor" stroke-width="4"/>
                         <line x1="65" y1="50" x2="80" y2="50" stroke="currentColor" stroke-width="4"/>
                     </svg>
+
                     <svg class="floating-valve" viewBox="0 0 100 100">
                         <rect x="30" y="30" width="40" height="40" fill="none" stroke="currentColor" stroke-width="4"/>
                         <circle cx="50" cy="50" r="8" fill="currentColor"/>
                         <line x1="50" y1="10" x2="50" y2="30" stroke="currentColor" stroke-width="4"/>
                         <line x1="50" y1="70" x2="50" y2="90" stroke="currentColor" stroke-width="4"/>
                     </svg>
+
                     <svg class="floating-valve" viewBox="0 0 100 100">
                         <polygon points="50,20 70,40 70,60 50,80 30,60 30,40" fill="none" stroke="currentColor" stroke-width="4"/>
                         <circle cx="50" cy="50" r="6" fill="currentColor"/>
@@ -386,8 +214,10 @@
                             </svg>
                         </div>
                     </div>
+
                     <h1 class="company-name">Relief Valve Service Inc.</h1>
                     <p class="tagline">Professional Pressure Relief Solutions & Industrial Valve Services</p>
+
                     <div class="cta-buttons">
                         <a href="#services" class="cta-button cta-primary">Our Services</a>
                         <a href="#contact" class="cta-button cta-secondary">Get Quote</a>
@@ -403,7 +233,8 @@
                         <p class="text-lg text-gray-300 mb-4">When a critical valve fails, your entire operation grinds to a halt. Production stops, deadlines are missed, and revenue is lost. Finding a reliable expert for an urgent, after-hours repair isn't just a challenge—it's a high-stakes emergency that your business can't afford.</p>
                     </div>
                     <div data-aos="fade-left" class="relative">
-                        <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="A network of industrial pipes and valves in a facility" loading="lazy" decoding="async" class="rounded-lg shadow-2xl">
+                        <!-- OPTIMIZED: Added loading="lazy" for below-the-fold image -->
+                        <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="A network of industrial pipes and valves in a facility" loading="lazy" class="rounded-lg shadow-2xl">
                     </div>
                 </div>
             </section>
@@ -427,136 +258,4 @@
                         </div>
                         <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
                             <svg class="w-24 h-24 text-green-400 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.04899 2.92704C9.34899 2.00604 10.651 2.00604 10.951 2.92704L12.021 6.22004C12.181 6.72104 12.651 7.07304 13.171 7.07304H16.631C17.552 7.07304 17.952 8.32104 17.171 8.89104L14.371 10.84C13.971 11.141 13.801 11.661 13.961 12.162L15.031 15.455C15.331 16.376 14.241 17.132 13.461 16.562L10.661 14.609C10.261 14.308 9.73099 14.308 9.33099 14.609L6.53099 16.562C5.75099 17.132 4.66099 16.376 4.96099 15.455L6.03099 12.162C6.19099 11.661 6.02099 11.141 5.62099 10.84L2.82099 8.89104C2.04099 8.32104 2.44099 7.07304 3.36099 7.07304H6.82099C7.34099 7.07304 7.81099 6.72104 7.97099 6.22004L9.04899 2.92704Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M19 12H22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M19 8H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M19 16H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <h3 class="text-2xl font-bold text-white">Satisfaction Guaranteed</h3>
-                            <p class="text-gray-400 max-w-sm">We stand behind our work with a commitment to quality service and your complete satisfaction.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- The Solution / Services Section -->
-            <section id="services" class="py-20 px-4 md:px-8">
-                <div class="container mx-auto max-w-6xl text-center">
-                    <h2 class="text-3xl md:text-4xl font-bold text-blue-400 mb-12">Your Partner in Minimizing Downtime.</h2>
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <div class="bg-gray-800 p-8 rounded-lg shadow-2xl" data-aos="fade-up" data-aos-delay="100">
-                            <h3 class="text-2xl font-bold text-white mb-4">24/7 Emergency Valve Repair</h3>
-                            <p class="text-gray-400">Immediate, round-the-clock response to critical equipment failures to get your production line back up and running as fast as possible.</p>
-                        </div>
-                        <div class="bg-gray-800 p-8 rounded-lg shadow-2xl" data-aos="fade-up" data-aos-delay="200">
-                            <h3 class="text-2xl font-bold text-white mb-4">Scheduled Valve Maintenance</h3>
-                            <p class="text-gray-400">Prevent costly downtime with our proactive maintenance and testing services, designed to keep your equipment in peak condition.</p>
-                        </div>
-                        <div class="bg-gray-800 p-8 rounded-lg shadow-2xl" data-aos="fade-up" data-aos-delay="300">
-                            <h3 class="text-2xl font-bold text-white mb-4">Valve Testing & Certification</h3>
-                            <p class="text-gray-400">Ensure your relief valves meet all safety and operational standards with our comprehensive testing and certification services.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Testimonials Section -->
-            <section id="testimonials" class="py-20 px-4 md:px-8 bg-gray-800/50">
-                <div class="container mx-auto max-w-4xl text-center">
-                    <h2 class="text-3xl md:text-4xl font-bold text-blue-400 mb-12">Trusted by Industry Leaders</h2>
-                    <div class="grid md:grid-cols-1 gap-8">
-                        <div class="bg-gray-900 p-8 rounded-lg shadow-lg" data-aos="fade-up">
-                            <p class="text-gray-300 italic mb-4">"Jeff the reviewer must be on the wrong business page because RVS is a GREAT company operated by wonderful people who truly treat their clients well. Their work, pricing and friendly and attentive customer service is beyond compare. I highly recommend RVS!"</p>
-                            <p class="font-bold text-white">- Rebecca D.</p>
-                        </div>
-                        <div class="bg-gray-900 p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                            <p class="text-gray-300 italic mb-4">"This company far exceeds my expectations when it comes to valve work, products, and information!"</p>
-                            <p class="font-bold text-white">- Jimmy K.</p>
-                        </div>
-                         <div class="bg-gray-900 p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                            <p class="text-gray-300 italic mb-4">"Consistently excellent and reliable service. When you have a critical failure, this is the team you want on your side. Professional, fast, and they get the job done right."</p>
-                            <p class="font-bold text-white">- Lisa G.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- FAQs Section -->
-            <section id="faq" class="py-20 px-4 md:px-8">
-                <div class="container mx-auto max-w-4xl">
-                    <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-400 mb-12">Frequently Asked Questions</h2>
-                    <div class="space-y-4">
-                        <details class="bg-gray-800 p-6 rounded-lg group" data-aos="fade-up">
-                            <summary class="font-bold text-lg text-white cursor-pointer list-none flex justify-between items-center">
-                                What is your primary service area?
-                                <span class="transform transition-transform duration-300 group-open:rotate-45">+</span>
-                            </summary>
-                            <p class="text-gray-400 mt-4">We are based in Millbrook, Alabama, and proudly serve the surrounding industrial and manufacturing communities. For large-scale projects or emergencies, please contact us to discuss service availability in your area.</p>
-                        </details>
-                        <details class="bg-gray-800 p-6 rounded-lg group" data-aos="fade-up">
-                            <summary class="font-bold text-lg text-white cursor-pointer list-none flex justify-between items-center">
-                                What industries do you typically serve?
-                                <span class="transform transition-transform duration-300 group-open:rotate-45">+</span>
-                            </summary>
-                            <p class="text-gray-400 mt-4">We specialize in supporting B2B clients across various industrial sectors, including manufacturing plants, processing facilities, power generation, and any business that relies on critical valve systems for their operations.</p>
-                        </details>
-                        <details class="bg-gray-800 p-6 rounded-lg group" data-aos="fade-up">
-                            <summary class="font-bold text-lg text-white cursor-pointer list-none flex justify-between items-center">
-                                How quickly can you respond to an emergency call?
-                                 <span class="transform transition-transform duration-300 group-open:rotate-45">+</span>
-                            </summary>
-                            <p class="text-gray-400 mt-4">Our 24/7 emergency response is our highest priority. We aim for the fastest possible dispatch to minimize your downtime. Response times can vary based on location and current demand, but we will always provide an accurate ETA when you call.</p>
-                        </details>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact" class="py-20 px-4 md:px-8 bg-gray-800/50">
-                <div class="container mx-auto max-w-4xl text-center relative z-10">
-                    <h2 class="text-3xl md:text-4xl font-bold text-blue-400 mb-4">Get Immediate Help</h2>
-                    <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">For emergency service, call us directly. For quotes or questions, fill out the form below, and our team will get back to you promptly.</p>
-                    <div class="bg-gray-900 p-8 rounded-lg shadow-2xl" data-aos="fade-up">
-                        <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
-                            <div class="text-white">
-                                <h3 class="font-bold">Relief Valve Service Inc.</h3>
-                            </div>
-                            <a href="tel:+1-334-451-3758" class="font-bold text-lg text-blue-400 hover:text-blue-500 transition-colors">
-                                (334) 451-3758
-                            </a>
-                            <a href="mailto:rvs@elmore.rr.com" class="font-bold text-lg text-blue-400 hover:text-blue-500 transition-colors">
-                                rvs@elmore.rr.com
-                            </a>
-                        </div>
-                        <form action="#" method="POST" class="space-y-6 text-left">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <input type="text" name="name" placeholder="Your Name" required autocomplete="name" class="form-input w-full bg-gray-800 border-gray-700 border-2 rounded-md p-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                <input type="email" name="email" placeholder="Your Email" required autocomplete="email" class="form-input w-full bg-gray-800 border-gray-700 border-2 rounded-md p-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            </div>
-                            <input type="text" name="subject" placeholder="Subject" required class="form-input w-full bg-gray-800 border-gray-700 border-2 rounded-md p-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            <textarea name="message" rows="5" placeholder="Your Message" required class="form-input w-full bg-gray-800 border-gray-700 border-2 rounded-md p-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                            <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg text-lg hover:bg-blue-700 transition-colors shadow-lg">Send Message</button>
-                        </form>
-                        <div class="mt-8 text-gray-500">
-                            Serving Millbrook, AL and surrounding areas.
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer role="contentinfo" class="bg-black text-center p-6">
-            <p class="text-gray-500">© 2025 Relief Valve Service Inc. All Rights Reserved. | Designed by AI-Powered Strategy</p>
-        </footer>
-    </div>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-    <script>
-      AOS.init({
-        once: true,
-        duration: 800,
-      });
-    </script>
-    <script src='https://app.aminos.ai/js/chat_plugin.js' data-bot-id='36588' defer></script>
-</body>
-</html>
+                                <path d="M9.04899 2.92704C9.34899 2.00604 10.651 2.00604 10.951 2.92704L12.021 6.22004C12.181 6.72104 12.651 7.07304 13.171 7.07304H16.631C17.552 7.07304 17.952 8.32104 17.171 8.89104L14.371 10.84C13.971 11.141 13.801 11.661 13.961 12.162L15.031 15.455C15.331 16.376 14.241 17.132 13.461 16.562L10.661 14.609C10.261 14.308 9.73099 14.308 9.33099 14.609L6.53099 16.562C5.75099 17.132 4.66099 16.
